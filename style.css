@@ -70,6 +70,7 @@ ul {
 .card {
   padding: 2.5rem 2rem;
   backdrop-filter: blur(5px);
+  backdrop-filter: -webkit-blur(5px);
   border-radius: 10px;
   background: rgba(211, 199, 187, 0.5);
   max-width: 400px;
