@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Ngoc cute nhat hmt</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./avatar.png">
+  <!-- Primary Meta Tags -->
+  <title>Thanh Ngoc cute nhat hmt</title>
+  <meta name="title" content="Thanh Ngoc cute nhat hmt">
+  <meta name="description" content="Thanh Ngoc cute nhat hmt / @yun.khngn">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:title" content="Thanh Ngoc cute nhat hmt">
+  <meta property="og:description" content="Thanh Ngoc cute nhat hmt / @yun.khngn">
+  <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:title" content="Thanh Ngoc cute nhat hmt">
+  <meta property="twitter:description" content="Thanh Ngoc cute nhat hmt / @yun.khngn">
+  <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+</head>
+<body>
+<body id="body" class="body">
+  <div class="wrap">
+    <div class="card" id="card" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+    unselectable="on"
+    onselectstart="return false;" 
+    onmousedown="return false;">
+      <div class="top">
+        <div class="img">
+          <img id="ninhdeptrai"  src="./tngocne.png" alt="Đức đần">
+          <div class="name">
+            <h2 id="clickedCount">Tngoc cute</h2>
+            <h4 id="data" class="data">@yun.khngn</h4>
+          </div>
+          <div class="links">
+            <button class="ditmeninh" onclick="clicked()">Click nếu b thấy tngoc cute</button>
+          </div>
+        </div>
+        <div class="infos">
+          <p class="text">
+            Nhá hàng siêu cấp vippzo,<br>
+            Sự tình thế nào, hồi sau sẽ rõ (4/9).
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <audio id="audio" preload="none">
+      <source src="./nhac.mp3" type="audio/mpeg" />
+      Your browser does not support this audio type.
+    </audio> 
+      <p style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+      unselectable="on"
+      onselectstart="return false;" 
+      onmousedown="return false;" class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Created by <a class="linking" href="https://www.facebook.com/yun.khngn" target="_blank" style="text-decoration: none; color:white;"><strong>Khoa Nguyễn</strong></a></a></p>
+    </dbody>
+    
+    </body>
+
+<script >
+  if(localStorage.getItem("clickedCount") === null){
+      localStorage.setItem("clickedCount", 0) 
+  }
+
+  var clickedTime = document.getElementById("clickedCount")
+  clickedTime.innerHTML = "Tngoc cute x" + localStorage.getItem("clickedCount")
+
+  function clicked(){
+    var clickedTime = document.getElementById("clickedCount")
+    var current = localStorage.getItem("clickedCount")
+    var img = document.getElementById("ninhdeptrai")
+
+    //add rotating class to img if img doesn't have it
+    img.classList.add("rotating")
+    clickedTime.innerHTML = "Tngoc cute x" + parseInt(current)
+    var currentValue = parseInt(current) + 1
+    localStorage.setItem("clickedCount", currentValue)
+    playMusic()
+  }
+
+  function playMusic(){
+      var audio = document.getElementById("audio")
+      var credit = document.getElementById("data")
+      audio.play();
+      credit.innerHTML = "@yun.khngn / Playing music"
+  }
+</script>
+</html>
