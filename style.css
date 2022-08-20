@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  min-height: 100vh;
+  min-height: -webkit-fill-available;
   background-repeat: no-repeat;
  background-attachment: fixed;
  background-size: cover;
